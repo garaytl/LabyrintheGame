@@ -1,6 +1,6 @@
 package fr.iutvalence.info.dut.m3105.labyrinthGame;
 
-public class DumbBotArtificialIntelligence implements RobotArtificialIntelligence
+public class DumbBotArtificialIntelligence extends RobotArtificialIntelligence
 {
 	private boolean isBlocked;
 
@@ -30,5 +30,15 @@ public class DumbBotArtificialIntelligence implements RobotArtificialIntelligenc
 	public void notifyMoveResult(boolean hasMoved)
 	{
 		this.isBlocked = !hasMoved;
+	}
+
+	@Override
+	public String name() {
+		return "DumbBot";
+	}
+
+	@Override
+	public RobotArtificialIntelligence makeRAI() {
+		return null;
 	}
 }
